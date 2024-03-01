@@ -7,19 +7,15 @@ from user import user_blue
 from course import course_blue
 
 
-def create_app():
-    app = Flask(__name__)
+app = Flask(__name__)
 
-    app.config.from_object(config)
+app.config.from_object(config)
 
-    app.register_blueprint(user_blue)
-    app.register_blueprint(course_blue)
+app.register_blueprint(user_blue)
+app.register_blueprint(course_blue)
 
-    db.init_app(app)
-    return app
+db.init_app(app)
 
-
-create_app()
 
 
 ## for base.html
@@ -41,6 +37,10 @@ def require_login():
 @app.errorhandler(404)
 def page_not_found(e):
     return 'Url is error. The homepage is /course/index/1'
+
+@app.route('/',methods=['GET'])
+def hello():
+    return redirect(url_for('user.login'))
 
 
 # with app.app_context():
