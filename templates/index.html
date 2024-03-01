@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+{% endblock %}
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <ul class="course-ul">
+        {% for course in courses %}
+              <li>
+                <div class="side-course">
+                </div>
+                <div class="course-main">
+                    <p class="course-title"><a href="{{ url_for('course.detail',id=course.id) }}">{{ course.course_title }}</a></p>
+
+                    <p class="course-detail">
+                        <span class="course-author">{{ course.level }} , rating: {{ course.rating }}</span>
+                    </p>
+
+                    <p class="course-content">
+                        KeyWord : {{ course.keyword }}<br><br>
+                        {{ course.modules }}
+                    </p>
+
+                    <p class="course-detail">
+                        <span class="course-author">{{ course.instructor }} , {{ course.offered_by }}</span>
+                    </p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">{{ page }}</a></li>
+        <li class="page-item"><a class="page-link" href="{{ url_for('course.index', page=page-1) }}">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="{{ url_for('course.index', page=1) }}">1</a></li>
+        <li class="page-item"><a class="page-link" href="{{ url_for('course.index', page=2) }}">2</a></li>
+        <li class="page-item"><a class="page-link" href="{{ url_for('course.index', page=3) }}">3</a></li>
+
+        <li class="page-item"><a class="page-link" href="{{ url_for('course.index', page=page+1) }}">Next</a></li>
+        <li class="page-item"><a class="page-link" href="{{ url_for('course.index', page=page_count) }}">{{ page_count }}</a></li>
+      </ul>
+    </nav>
+{% endblock %}

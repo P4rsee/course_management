@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/detail.css') }}">
+{% endblock %}
+
+{% block title %}Detail{% endblock %}
+
+{% block main %}
+    <h3 class="page-title">{{ course.course_title }}</h3>
+    <p class="course-info">
+        <span>Instructor:{{ course.instructor }}</span><br>
+        <span>Institution:{{ course.offered_by }}</span><br>
+        <span>Url:{{ course.course_url }}</span>
+    </p>
+    <hr>
+
+    <p class="course-content">
+        KeyWord : {{ course.keyword }} <br><br>
+        Rating : {{ course.rating }} <br><br>
+        Level : {{ course.level }} <br><br>
+        Schedule : {{ course.schedule }} <br><br>
+        What you will learn : {{ course.what_you_will_learn }} <br><br>
+        Skill gain : {{ course.skill_gain }} <br><br>
+        Duration to complete (Approx.) : {{ course.duration_to_complete }} <br><br>
+        Number of Review : {{ course.number_of_review }} <br><br>
+
+
+
+        Modules: {{ course.modules }} <br>
+    </p>
+
+
+    <hr>
+{% endblock %}

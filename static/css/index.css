@@ -1,0 +1,49 @@
+.main{
+    border: 1px solid #e6e6e6;
+}
+
+.main .course-ul{
+}
+
+.course-ul li{
+    padding: 10px;
+    overflow: hidden;
+    border-bottom:1px solid #eee;
+}
+.side-course{
+    float: left;
+    height:100%;
+}
+.side-course-avatar{
+    width: 38px;
+    height:38px;
+    border-radius: 3px;
+}
+
+.course-main{
+    float: left;
+    width: 660px;
+    margin-left:10px;
+    overflow: hidden;
+}
+
+.course-title a{
+    color: #259;
+    font-size:14px;
+    font-weight: 900;
+}
+.course-author{
+    font-size: 12px;
+    margin-top: 5px;
+}
+.course-content{
+    margin-top: 5px;
+    font-size:12px;
+}
+.course-detail{
+    text-align: right;
+    margin-top: 10px;
+}
+.course-detail .course-author{
+    margin-right:10px;
+}
