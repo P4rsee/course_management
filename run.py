@@ -15,7 +15,7 @@ def create_app():
     app1.register_blueprint(user_blue)
     app1.register_blueprint(course_blue)
 
-    db.init_app(app)
+    db.init_app(app1)
     return app1
 
 
