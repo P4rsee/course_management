@@ -4,9 +4,11 @@ Flask @ file:///C:/b/abs_efc024w7fv/croot/flask_1702980041157/work
 Flask-SQLAlchemy==0.6
 Flask-WTF==1.2.1
 greenlet @ file:///C:/b/abs_a6c75ie0bc/croot/greenlet_1702060012174/work
+gunicorn==21.2.0
 itsdangerous @ file:///tmp/build/80754af9/itsdangerous_1621432558163/work
 Jinja2 @ file:///C:/b/abs_f7x5a8op2h/croot/jinja2_1706733672594/work
 MarkupSafe @ file:///C:/b/abs_ecfdqh67b_/croot/markupsafe_1704206030535/work
+packaging==23.2
 psycopg2-binary==2.9.9
 PyMySQL==1.1.0
 SQLAlchemy @ file:///C:/b/abs_876dxwqqu8/croot/sqlalchemy_1705089154696/work
